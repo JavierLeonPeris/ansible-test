@@ -1,6 +1,6 @@
 ---
 - name: Test hello world
-  hosts: localhost
+  hosts: all
   tasks: 
     - name: Run Hello world
       debug:
