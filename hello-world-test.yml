@@ -1,0 +1,7 @@
+---
+- name: Test hello world
+  hosts: localhost
+  tasks: 
+    - name: Run Hello world
+      debug:
+        msg: "Hello world!!!"
