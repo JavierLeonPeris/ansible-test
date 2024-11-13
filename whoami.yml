@@ -1,0 +1,6 @@
+---
+- name: Test whoami
+  hosts: all
+  tasks: 
+    - name: Run whoami
+      shell: whoami
