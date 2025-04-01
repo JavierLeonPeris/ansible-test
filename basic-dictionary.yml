@@ -1,0 +1,13 @@
+---
+- name: Using dictionaries in Ansible
+  hosts: localhost
+  gather_facts: no
+  vars:
+    my_dict:
+      name: Ansible
+      version: 2.14
+      description: Configuration management tool
+  tasks:
+    - name: Print dictionary values
+      debug:
+        msg: "{{ my_dict }}"

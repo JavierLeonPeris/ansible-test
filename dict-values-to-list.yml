@@ -1,0 +1,14 @@
+- name: Convert dictionary values to list
+  hosts: localhost
+  gather_facts: no
+  vars:
+    my_dict:
+      key1: value1
+      key2: value2
+      key3: value3
+  tasks:
+    - name: Convert dictionary to list
+      set_fact:
+        my_list: "{{ my_dict | dict2items | map(attribute='value') | list }}"
+    - debug:
+        msg: "{{ my_list }}"
